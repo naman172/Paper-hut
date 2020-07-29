@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>Paper Hut | About</title>
+<style>
+nav {    
+    display: block;
+    text-align: center;
+font-family: bradley hand ITC; 
+ 
+}
+  nav ul {
+    margin: 0;
+    padding:0;
+    list-style: none;
+  }
+  .nav a {
+width: 141.6px;    
+display:block; 
+    background-color: #61bb46; 
+    color:#fff; 
+    text-decoration: none;
+    padding: .8em 1.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    position: relative;
+  }
+  .nav{  
+    vertical-align: top; 
+    display: inline-block;
+    box-shadow: 1px -1px -1px 1px #000, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;
+    border-radius:6px;
+  }
+  .nav li{position: relative;}
+  .nav > li { 
+    float:left; 
+    border-bottom: 4px #aaa solid; 
+    margin-right: 1px; 
+  } 
+  .nav > li > a { 
+    margin-bottom:1px;
+    
+  }
+  .nav > li:hover , .nav > li:hover >a{  border-bottom-color:fcaf17;}
+  .nav li:hover > a { background-color:fcaf17; }
+  .nav > li:first-child  { border-radius: 4px 0 0 4px;} 
+  .nav > li:first-child>a{border-radius: 4px 0 0 0;}
+  .nav > li:last-child  { 
+    border-radius: 0 0 4px 0; 
+    margin-right: 0;
+} 
+  .nav > li:last-child >a{border-radius: 0 4px 0 0; }
+  .nav li li a { margin-top:1px}
+  
+  
+  
+    .nav li a:first-child:nth-last-child(2):before { 
+     content:""; 
+     position: absolute; 
+     height:0; 
+     width: 0; 
+     border: 5px solid transparent; 
+     top: 50% ;
+     right:5px;  
+   }
+   
+   
+   
+   
+   
+   /* submenu positioning*/
+.nav ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid  fcaf17;
+  z-index: 1;
+  left: -99999em;
+}
+.nav > li:hover > ul {
+  left: auto;
+  padding-top: 5px  ;
+  min-width: 100%;
+}
+.nav > li li ul {  border-left:1px solid #fff;}
+
+
+.nav > li li:hover > ul { 
+ /* margin-left: 1px */
+  left: 100%;
+  top: -1px;
+}
+/* arrow hover styling */
+.nav > li > a:first-child:nth-last-child(2):before { 
+  border-top-color: #fff; 
+}
+.nav > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-bottom-color: #fff; 
+  margin-top:-5px
+}
+.nav li li > a:first-child:nth-last-child(2):before {  
+  border-left-color: #fff; 
+  margin-top: -5px
+}
+.nav li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-right-color: fff;
+  right: 10px; 
+}
+</style>
+</head>
+<body background="back.png">
+<div id="outerbody" style="width:1000px;height:1270px;margin:0 Auto;">
+<div id="header" style="height:150px;background:url('paperhu.png')">
+</div>
+<nav>
+  <ul class="nav">
+    <li><a href="Home.html">home</a></li>
+    <li><a href="About.html">about</a> </li>
+    <li><a href>our products</a>
+      <ul>
+        <li><a href="Cards.html">cards</a></li>
+        <li><a href="Bookmarks.html">bookmarks</a>
+          <ul>
+            <li><a href="Cornered.html">corner</a></li>
+            <li><a href="Straight.html">straigth</a></li>
+          </ul>
+        </li>
+        <li><a href="Portraits.html">portraits</a></li>
+        <li><a href="3Dorgami.html">3D origami</a></li>
+      </ul>
+    </li>
+    <li><a href="Customise.html">customise</a></li>
+    <li><a href="Contactus.html">Contact us</a></li>
+  </ul>
+<div id="bodycontainer" style="text-align: center;font-family: bradley hand ITC;font-weight: bold;">
+<h1><font size="8"><u>About us...</u></font></h1>
+<p><font size="6">
+<br>We have always believed that our vision is as important as our hearing when we communicate. 
+Very rarely do we rely on words alone. It is what we see, and how our brains interpret what
+ we see that shapes our perceptions and actions. We began Paper hut with 
+that understanding. We wanted our art to communicate to the observer what our words cannot do effectively. 
+
+<br>When We cut or twirl or fold paper, we feel as if we are peeling back the outer, superficial layer of our vision to reveal the
+ secret space beneath. With paper there are so many opportunities to create negative space that tells 
+its own story. Letting the observer become present in the piece allows him or her to look through it.
+
+<br>We have great respect for paper.We feel that there are very few things in the world as reliable and constant as paper.
+Paper is everywhere and it has been telling stories for centuries. By respecting and honoring paper
+for what it is, and not considering it a stepping-stone to something greater, 
+we feel like we are communicating some of the pleasure it brings to us.
+<br> We are not creating for Art’s sake.<br>
+ We are creating for Paper’s sake, to make visible the stories that every piece of paper attempts to tell to us.</font></p>
+<h1><font size="7">Paper Hut...</font></h1>
+</div>
+</div>
+<div id="footer" style="width:99.5%;height:125px;background-color:61bb46;padding-left:8px;">
+<h4><font color="white">© 2015 Paperhut.org</font></h4>
+</div>
+</body>
+</html>

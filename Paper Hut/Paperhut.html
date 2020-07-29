@@ -1,0 +1,365 @@
+<html>
+<head>
+<title>Paper Hut | Home</title>
+<style>
+nav {    
+    display: block;
+    text-align: center;
+font-family: bradley hand ITC; 
+ 
+}
+  nav ul {
+    margin: 0;
+    padding:0;
+    list-style: none;
+  }
+  .nav a {
+width: 141.6px;    
+display:block; 
+    background-color: #61bb46; 
+    color:#fff; 
+    text-decoration: none;
+    padding: .8em 1.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    position: relative;
+  }
+  .nav{  
+    vertical-align: top; 
+    display: inline-block;
+    box-shadow: 1px -1px -1px 1px #000, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;
+    border-radius:6px;
+  }
+  .nav li{position: relative;}
+  .nav > li { 
+    float:left; 
+    border-bottom: 4px #aaa solid; 
+    margin-right: 1px; 
+  } 
+  .nav > li > a { 
+    margin-bottom:1px;
+    
+  }
+  .nav > li:hover , .nav > li:hover >a{  border-bottom-color:fcaf17;}
+  .nav li:hover > a { background-color:fcaf17; }
+  .nav > li:first-child  { border-radius: 4px 0 0 4px;} 
+  .nav > li:first-child>a{border-radius: 4px 0 0 0;}
+  .nav > li:last-child  { 
+    border-radius: 0 0 4px 0; 
+    margin-right: 0;
+} 
+  .nav > li:last-child >a{border-radius: 0 4px 0 0; }
+  .nav li li a { margin-top:1px}
+  
+  
+  
+    .nav li a:first-child:nth-last-child(2):before { 
+     content:""; 
+     position: absolute; 
+     height:0; 
+     width: 0; 
+     border: 5px solid transparent; 
+     top: 50% ;
+     right:5px;  
+   }
+   
+   
+   
+   
+   
+   /* submenu positioning*/
+.nav ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid  fcaf17;
+  z-index: 1;
+  left: -99999em;
+}
+.nav > li:hover > ul {
+  left: auto;
+  padding-top: 5px  ;
+  min-width: 100%;
+}
+.nav > li li ul {  border-left:1px solid #fff;}
+
+
+.nav > li li:hover > ul { 
+ /* margin-left: 1px */
+  left: 100%;
+  top: -1px;
+}
+/* arrow hover styling */
+.nav > li > a:first-child:nth-last-child(2):before { 
+  border-top-color: #fff; 
+}
+.nav > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-bottom-color: #fff; 
+  margin-top:-5px
+}
+.nav li li > a:first-child:nth-last-child(2):before {  
+  border-left-color: #fff; 
+  margin-top: -5px
+}
+.nav li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-right-color: fff;
+  right: 10px; 
+}
+</style>
+<style>
+
+.slides {
+    padding: 10px;
+    width: 900px;
+    height: 292px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 900px;
+    height: 312px;
+    display: block;
+    position: absolute;
+padding: 10px;
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity 2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 320px;
+    font-family: sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+.nav .next { right: 0; }
+
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+	background: rgba(0, 0, 0, 0.8);
+}
+</style>
+</head>
+<body background="Pages/back.png">
+<div id="outerbody" style="width:1000px;height:1270px;margin:0 Auto;">
+<div id="header" style="height:150px;background:url('Pages/paperhu.png')">
+</div>
+<nav>
+  <ul class="nav">
+    <li><a href="Pages/Home.html">home</a></li>
+    <li><a href="Pages/About.html">about</a> </li>
+    <li><a href>our products</a>
+      <ul>
+        <li><a href="Pages/Cards.html">cards</a></li>
+        <li><a href="Pages/Bookmarks.html">bookmarks</a>
+          <ul>
+            <li><a href="Pages/Cornered.html">cornered</a></li>
+            <li><a href="Pages/Straight.html">strigth</a></li>
+          </ul>
+        </li>
+        <li><a href="Pages/Portraits.html">portraits</a></li>
+        <li><a href="Pages/3Dorgami.html">3D origami</a></li>
+      </ul>
+    </li>
+    <li><a href="Pages/Customise.html">customise</a></li>
+    <li><a href="Pages/Contactus.html">Contact us</a></li>
+  </ul>
+</nav>
+<ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+		<div class="slide">
+			<img src="Pages/image/b.png">
+        </div>
+		<div class="nav">
+			<label for="img-6" class="prev">&#x2039;</label>
+			<label for="img-2" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="Pages/image/m.png">
+        </div>
+		<div class="nav">
+			<label for="img-1" class="prev">&#x2039;</label>
+			<label for="img-3" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="Pages/image/i.png">
+        </div>
+		<div class="nav">
+			<label for="img-2" class="prev">&#x2039;</label>
+			<label for="img-4" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="Pages/image/p.png">
+        </div>
+		<div class="nav">
+			<label for="img-3" class="prev">&#x2039;</label>
+			<label for="img-5" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="Pages/image/j.png">
+        </div>
+		<div class="nav">
+			<label for="img-4" class="prev">&#x2039;</label>
+			<label for="img-6" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-6" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="Pages/image/s.png">
+        </div>
+		<div class="nav">
+			<label for="img-5" class="prev">&#x2039;</label>
+			<label for="img-1" class="next">&#x203a;</label>
+		</div>
+    </li>
+
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+    </li>
+</ul>
+<div id="bodycontainer" style="text-align: center;font-family: bradley hand ITC;font-weight: bold;">
+<h1><font size="8">Welcome...</font></h1>
+<p><font size="6">
+Paper hut new world of paper craft.. which includes - cards, bookmarks, portraits, scrapbooks and lots more..<br>
+Paper is a simple material that can be manipulated in endless ways. From flat pieces to 3 dimensional sculptures and installations,
+to photographic images and animation, paper has the potential to become whatever we want. 
+The only limit is our imagination.<br>
+we make things on orders also. so please give us orders..
+</font></p>
+<div id="customised products" style="float:left;background-color:WHITE;width:425px;height:325px;margin:10px;padding-left:10px;">
+<h1>What's new ??</h1>
+<hr>
+<p><font size="5"><marquee behavior="scroll" direction="up" scrollamount="3" style="height:200px;">Paper Portraits are here...<br>
+Patience, precision and a very steady hand are only a few of the skills necessary to realize the series of hand-cut paper portraits
+but you don't need to worry as we are here..<br>
+Provide us with any pic of you or your dear ones and see the magic we do it...<br>
+<hr>
+<br>
+Order directly from our site...<br> 
+Comming soon..
+<br>
+<br>
+<hr> 
+</marquee>
+</font>
+</div>
+<div id="bulk orders" style="float:right;background-color:white;width:425px;height:325px;margin:10px;padding-left:10px;">
+<h1>Bulk Orders...</h1><hr>
+<p><font size="5"><marquee behavior="scroll" direction="up" scrollamount="3" style="height:200px;">
+Have a large order to place..?,Don't worry we'll take care of that..<br> 
+We do accept large orders and even give huge discounts on them..<br>So, bring it on...<hr>
+</marquee></font></p>
+</div>
+</div>
+</div>
+<div id="footer" style="width:99.5%;height:125px;background-color:61bb46;padding-left:8px;">
+<h4><font color="white">© 2015 Paperhut.org</font></h4>
+</div>
+</body>
+</html>
